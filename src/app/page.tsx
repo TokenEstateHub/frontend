@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
-// import Hero from "@/components/Hero";
+import Hero from "@/components/Hero";
 // import Features from "@/components/Features";
 // import HowItWorks from "@/components/HowItWorks";
 // import CallToAction from "@/components/CallToAction";
@@ -11,8 +11,8 @@ export default function Home() {
     <div className="w-full min-h-screen bg-gradient-to-b from-white to-blue-50">
       <Navbar />
       <main className="container mx-auto px-4 py-16">
-        {/* <Hero />
-        <Features />
+        <Hero />
+        {/* <Features />
         <HowItWorks />
         <CallToAction /> */}
       </main>
