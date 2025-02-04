@@ -1,78 +1,70 @@
-import React from "react";
+"use client";
+import { BsGithub, BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs";
+import Link from "next/link";
 
-const currentYear = new Date().getFullYear();
+export default function FooterUpdate() {
+  const footerLinks = [
+    {
+      title: "Product",
+      links: ["Features", "Services", "Security", "Resources"],
+    },
+    {
+      title: "Company",
+      links: ["About", "Blog", "Press", "Careers"],
+    },
+    {
+      title: "Support",
+      links: ["Help Center", "Privacy Policy", "Terms of Service", "Contact"],
+    },
+  ];
 
-const Footer = () => {
+  const socialLinks = [
+    { href: "https://x.com", icon: <BsTwitterX /> },
+    { href: "https://linkedin.com", icon: <BsLinkedin /> },
+    { href: "https://github.com", icon: <BsGithub /> },
+    { href: "https://instagram.com", icon: <BsInstagram /> },
+  ];
+
   return (
-    <footer className="bg-white py-16 px-4 sm:px-8 lg:px-16 shadow-lg">
-      <div className="max-w-4xl mx-auto p-8 rounded-2xl bg-white text-center">
-        {/* Newsletter Subscription */}
-        <div className="mb-10">
-          <h2 className="text-2xl font-semibold text-blue-900">Subscribe to our Newsletter</h2>
-          <p className="text-gray-600 mt-2">Get the latest updates and insights.</p>
-          <div className="mt-4 flex flex-col sm:flex-row justify-center gap-3">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full sm:w-72 px-4 py-2 rounded-md text-gray-800 focus:outline-none border border-gray-300"
-            />
-            <button className="bg-blue-600 px-6 py-2 rounded-md hover:bg-blue-800 transition text-white">
-              Subscribe
-            </button>
+    <footer className="bg-white py-12">
+      <div className="container mx-auto px-4">
+        <nav className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {footerLinks.map((section) => (
+            <div key={section.title}>
+              <h4 className="text-lg font-semibold mb-4 text-blue-900">
+                {section.title}
+              </h4>
+              <ul className="space-y-2">
+                {section.links.map((link) => (
+                  <li key={link}>
+                    <Link href="" className="text-gray-600 hover:text-blue-600">
+                      {link}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-blue-800">
+              Connect
+            </h4>
+            <div className="flex space-x-4">
+              {socialLinks.map(({ href, icon }) => (
+                <Link key={href} href={href} className="text-gray-600 hover:text-blue-600 text-xl">
+                  {icon}
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
+        </nav>
 
-        {/* Footer Navigation Links */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center sm:text-left">
-          <div>
-            <h3 className="text-lg font-semibold text-blue-900">Company</h3>
-            <ul className="mt-2 space-y-2">
-              {["About", "Careers", "Blog"].map((item) => (
-                <li key={item}>
-                  <a href="" className="text-gray-600 hover:text-blue-900 transition">
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-blue-900">Resources</h3>
-            <ul className="mt-2 space-y-2">
-              {["Help Center", "Guides", "Webinars"].map((item) => (
-                <li key={item}>
-                  <a href="" className="text-gray-600 hover:text-blue-900 transition">
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-blue-900">Legal</h3>
-            <ul className="mt-2 space-y-2">
-              {["Privacy Policy", "Terms of Use"].map((item) => (
-                <li key={item}>
-                  <a href="" className="text-gray-600 hover:text-blue-900 transition">
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Copyright & Legal Section */}
-        <div className="mt-10 text-gray-600 text-sm">
-          <p>&copy; {currentYear} YourCompany. All rights reserved.</p>
-          <p>
-            <a href="" className="hover:text-blue-900">Terms of Use</a> ·{" "}
-            <a href="" className="hover:text-blue-900">Privacy Policy</a>
+        <div className="mt-8 pt-8 text-center border-t">
+          <p className="text-gray-600">
+            &copy; {new Date().getFullYear()} TokenEstate. All rights reserved.
           </p>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
