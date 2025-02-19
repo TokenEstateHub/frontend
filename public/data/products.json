@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "title": "Luxury Family Home",
+      "price": "$750,000",
+      "location": "75 Prince St, NY, USA",
+      "type": "For Sale",
+      "image": "https://via.placeholder.com/300x200"
+    },
+    {
+      "id": 2,
+      "title": "Family House For Rent",
+      "price": "$2,500/month",
+      "location": "23 Elm St, CA, USA",
+      "type": "For Rent",
+      "image": "https://via.placeholder.com/300x200"
+    },
+    {
+      "id": 3,
+      "title": "Modern Apartment",
+      "price": "$600,000",
+      "location": "70 Bright St, NY, USA",
+      "type": "For Sale",
+      "image": "https://via.placeholder.com/300x200"
+    },
+    {
+      "id": 4,
+      "title": "Cozy Studio Apartment",
+      "price": "$1,800/month",
+      "location": "10 Main St, LA, USA",
+      "type": "For Rent",
+      "image": "https://via.placeholder.com/300x200"
+    },
+    {
+      "id": 5,
+      "title": "Beachfront Villa",
+      "price": "$1,200,000",
+      "location": "101 Ocean Ave, Miami, USA",
+      "type": "For Sale",
+      "image": "https://via.placeholder.com/300x200"
+    },
+    {
+      "id": 6,
+      "title": "Suburban Family House",
+      "price": "$900,000",
+      "location": "44 Maple St, Boston, USA",
+      "type": "For Rent",
+      "image": "https://via.placeholder.com/300x200"
+    }
+  ]
