@@ -4,7 +4,9 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
 import CallToAction from "@/components/CallToAction";
+import Faqs from "@/components/Faqs";
 import Footer from "@/components/Footer";
+import Products from "@/components/Products";
 
 export default function Home() {
   return (
@@ -13,7 +15,9 @@ export default function Home() {
       <main className="container mx-auto px-4 py-16">
         <Hero />
         <Features />
+        <Products />
         <HowItWorks />
+        <Faqs />
         <CallToAction />
       </main>
       <Footer />
